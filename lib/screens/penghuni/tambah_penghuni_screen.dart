@@ -56,7 +56,7 @@ class TambahPenghuniScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // ─── Kamar ──────────────────────────────
+            // ─── Nomor Kamar ────────────────────────
             const Text(
               'Nomor kamar',
               style: AppText.label,
@@ -68,6 +68,77 @@ class TambahPenghuniScreen extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Contoh: A1',
                 prefixIcon: Icon(Icons.meeting_room),
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            // ─── Harga Kamar ────────────────────────
+            const Text(
+              'Harga kamar',
+              style: AppText.label,
+            ),
+
+            const SizedBox(height: 8),
+
+            const TextField(
+              keyboardType: TextInputType.number,
+
+              decoration: InputDecoration(
+                hintText: 'Contoh: 500000',
+                prefixIcon: Icon(Icons.payments),
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            // ─── Status ─────────────────────────────
+            const Text(
+              'Status penghuni',
+              style: AppText.label,
+            ),
+
+            const SizedBox(height: 8),
+
+            DropdownButtonFormField<String>(
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.info_outline),
+              ),
+
+              value: 'Aktif',
+
+              items: const [
+
+                DropdownMenuItem(
+                  value: 'Aktif',
+                  child: Text('Aktif'),
+                ),
+
+                DropdownMenuItem(
+                  value: 'Keluar',
+                  child: Text('Keluar'),
+                ),
+              ],
+
+              onChanged: (value) {},
+            ),
+
+            const SizedBox(height: 20),
+
+            // ─── Catatan ────────────────────────────
+            const Text(
+              'Catatan',
+              style: AppText.label,
+            ),
+
+            const SizedBox(height: 8),
+
+            const TextField(
+              maxLines: 3,
+
+              decoration: InputDecoration(
+                hintText: 'Catatan tambahan...',
+                alignLabelWithHint: true,
               ),
             ),
 
