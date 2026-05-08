@@ -1,0 +1,51 @@
+name: simkos
+description: Sistem Informasi Manajemen Tagihan Utilitas Kos - Wisma Al Rasyid
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Database lokal
+  sqflite: ^2.3.2
+  path: ^1.9.0
+
+  # Simpan session login
+  shared_preferences: ^2.2.3
+
+  # HTTP request (WA Gateway Fonnte)
+  http: ^1.2.1
+
+  # Format angka Rupiah & tanggal
+  intl: ^0.19.0
+
+  # Buka WhatsApp langsung dari app
+  url_launcher: ^6.2.6
+
+  # Icons
+  flutter_svg: ^2.0.10+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Nanti tambahkan font Inter jika sudah download:
+  # fonts:
+  #   - family: Inter
+  #     fonts:
+  #       - asset: assets/fonts/Inter-Regular.ttf
+  #       - asset: assets/fonts/Inter-Medium.ttf
+  #         weight: 500
+  #       - asset: assets/fonts/Inter-SemiBold.ttf
+  #         weight: 600
+  #       - asset: assets/fonts/Inter-Bold.ttf
+  #         weight: 700
