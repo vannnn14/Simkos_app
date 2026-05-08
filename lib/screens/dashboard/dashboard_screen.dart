@@ -4,6 +4,7 @@ import '../../widgets/menu_tile.dart';
 import '../../widgets/stat_card.dart';
 import '../../widgets/bottom_nav.dart';
 import '../penghuni/penghuni_screen.dart';
+import '../tagihan/biaya_bulanan_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -144,8 +145,16 @@ class DashboardScreen extends StatelessWidget {
 
               MenuTile(
                 icon: Icons.receipt_long_rounded,
-                title: 'Input tagihan',
+                title: 'Biaya bulanan',
                 subtitle: 'Atur biaya bulan ini',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const BiayaBulananScreen(),
+                    ),
+                  );
+                },
               ),
 
               const SizedBox(height: 12),
