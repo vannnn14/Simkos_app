@@ -5,6 +5,7 @@ import '../../widgets/stat_card.dart';
 import '../../widgets/bottom_nav.dart';
 import '../penghuni/penghuni_screen.dart';
 import '../tagihan/biaya_bulanan_screen.dart';
+import '../rekap/rekap_pembayaran_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -163,6 +164,14 @@ class DashboardScreen extends StatelessWidget {
                 icon: Icons.bar_chart_rounded,
                 title: 'Rekap pembayaran',
                 subtitle: 'Siapa sudah bayar',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const RekapPembayaranScreen(),
+                    ),
+                  );
+                },
               ),
 
               const SizedBox(height: 12),
